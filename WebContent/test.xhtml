@@ -3,7 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <head>
@@ -13,13 +12,15 @@
 <ui:composition template="/resources/template/layout.xhtml">
 
 	<ui:define name="content">
-		<f:view>
-			<h:form>
-				<h2>#{msg['main.title']}</h2>
-				<h:graphicImage library="images" name="homepage.jpg"
-					class="homePage" />
-			</h:form>
-		</f:view>
+		<h2>#{msg['test.title']}</h2>
 	</ui:define>
+
+	<ui:define name="footer">
+		<h2>#{msg['Test.footer.title']}</h2>
+		<ui:insert name="footerTest">
+			<ui:include src="/resources/template/footerTest.xhtml" />
+		</ui:insert>
+	</ui:define>
+
 </ui:composition>
 </html>

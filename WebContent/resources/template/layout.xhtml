@@ -8,20 +8,19 @@
 
 <h:head>
 	<h:outputStylesheet name="common-style.css" library="css" />
-
-
-
-	<f:loadBundle basename="message" var="msg" />
+	<h:outputStylesheet name="screen.css" library="css" />
+	<h:outputStylesheet name="enroll.css" library="css" />
+	<f:loadBundle basename="RedRose" var="msg" />
 
 </h:head>
 
 <h:body>
 	<div id="page">
-		<div id="header" class="header">
 			<ui:insert name="header">
+		<div id="header" class="header">
 				<ui:include src="/resources/template/header.xhtml" />
-			</ui:insert>
 		</div>
+			</ui:insert>
 
 		<div id="content" class="content">
 			<ui:insert name="content">

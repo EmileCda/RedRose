@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Java Maven JSF 6</title>
+</head>
+<ui:composition template="/resources/template/layout.xhtml">
+
+	<ui:define name="content">
+		<f:view>
+			<div class="screen-container">
+				<h:form>
+					<h2>#{msg['enroll.title']}</h2>
+					<div class="component">
+						<p:selectOneMenu class="component" autoWidth="false">
+							<f:selectItem itemValue="0"
+								itemLabel="                                              " />
+							<f:selectItem itemValue="1" itemLabel="Monsieur" />
+							<f:selectItem itemValue="2" itemLabel="Madame" />
+						</p:selectOneMenu>
+					</div>
+
+					<div class="component lastname">
+						<h:inputText value="#{UserBean.lastname}" required="true"
+							a:placeholder="#{msg['enroll.lastname']}"
+							requiredMessage="#{msg['enroll.prompt.lastname']}" id="lastname" />
+						<h:message for="lastname" />
+					</div>
+					<div class="component firstname">
+						<h:inputText value="#{UserBean.firstname}" required="true"
+							a:placeholder="#{msg['enroll.firstname']}"
+							requiredMessage="#{msg['enroll.prompt.firstname']}"
+							id="firstname" />
+						<h:message for="firstname" />
+					</div>
+
+					<div class="component ">
+						<p:datePicker value="#{UserBean.birthdate}"
+							a:placeholder="#{msg['enroll.birthdate']}" monthNavigator="true"
+							yearNavigator="true" showIcon="false" locale="fr"
+							class="birdthdate" />
+					</div>
+
+					<div class="component">
+						<h:inputText value="#{UserBean.email}" required="true"
+							a:placeholder="#{msg['enroll.email']}"
+							requiredMessage="#{msg['enroll.prompt.email']}" id="email" />
+						<h:message for="email" />
+					</div>
+
+					<p:commandButton icon="pi pi-home" type="button"
+					id="addBankCard2"
+						ajax="false"
+						value="#{msg['enroll.addAddress']}"
+						styleClass="ui-button-secondary" 
+						actionListener="#{UserBean.addAddress()}"
+						action="#{UserBean.addAddress()}" />
+					
+					<p:commandButton icon="pi pi-credit-card" type="button"
+					id="addAddress2"
+						ajax="false"
+						value="#{msg['enroll.addBankCard']}"
+						styleClass="ui-button-secondary" 
+						actionListener="#{UserBean.addBankCard()}"
+						action="#{UserBean.addBankCard()}" />
+					
+
+					<div class="component">
+						<h:commandButton id="addAddress"
+							value="#{msg['enroll.addAddress']}" styleClass="enroll-button"
+							action="#{UserBean.addAddress()}" />
+					</div>
+
+					<div class="component">
+						<h:commandButton id="addBankCard"
+							value="#{msg['enroll.addBankCard']}" styleClass="enroll-button"
+							action="#{UserBean.addBankCard()}" />
+					</div>
+
+				</h:form>
+			</div>
+		</f:view>
+	</ui:define>
+</ui:composition>
+</html>

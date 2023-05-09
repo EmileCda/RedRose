@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Java Maven JSF 6</title>
+</head>
+<ui:composition template="/resources/template/layout.xhtml">
+
+	<ui:define name="content">
+	<i class="pi pi-chevron-circle-left" ></i>
+		<h2>#{msg['test.primeface.title']}</h2>
+		<div class="line-component">
+			<div class="component">
+				<p:spinner class="number-street" placeholder="num." />
+			</div>
+			<div class="component number-type">
+				<p:selectOneMenu  class="number-type">
+				<f:selectItem itemValue="" itemLabel="" />
+				<f:selectItem itemValue="B" itemLabel="Bis" />
+				<f:selectItem itemValue="T" itemLabel="Ter" />
+				<f:selectItem itemValue="Q" itemLabel="Quatet" />
+
+				</p:selectOneMenu>
+
+			</div>
+		</div>
+		<div class="line-component">
+		<p:autoComplete   class="component w100" maxlength="1000" size="100" />
+		<p:inputTextarea>dsdsq</p:inputTextarea>
+		</div>
+
+		<p:datePicker />
+		<p:button icon="pi pi-plus-circle" />
+		<i class="pi pi-check"></i>
+		<p:selectOneRadio>
+			<f:selectItem itemValue="#{enroll.gender.male}" itemLabel="Monsieur" />
+			<f:selectItem itemValue="#{enroll.gender.female}" itemLabel="Madame" />
+			<f:selectItem itemValue="#{enroll.gender.other}" itemLabel="Autre" />
+		</p:selectOneRadio>
+
+		<p:selectOneListbox>
+			<f:selectItem itemValue="#{enroll.gender.male}" itemLabel="Monsieur" />
+			<f:selectItem itemValue="#{enroll.gender.female}" itemLabel="Madame" />
+			<f:selectItem itemValue="#{enroll.gender.other}" itemLabel="Autre" />
+
+		</p:selectOneListbox>
+
+		<p:selectOneMenu>
+			<f:selectItem itemValue="#{enroll.gender.male}" itemLabel="Monsieur" />
+			<f:selectItem itemValue="#{enroll.gender.female}" itemLabel="Madame" />
+			<f:selectItem itemValue="#{enroll.gender.other}" itemLabel="Autre" />
+
+		</p:selectOneMenu>
+		<p:imageSwitch effect="2"></p:imageSwitch>
+	</ui:define>
+
+
+</ui:composition>
+</html>

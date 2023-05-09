@@ -10,25 +10,40 @@
 <body>
 	<ui:composition>
 
-		<h:graphicImage library="images" name="logo.png" />
-		<h1>La Java d'émile</h1>
-		<h:form>
-			<ul>
-				<li><h:commandLink action="/main.xhtml">
-						<h:outputText value="#{msg['menu.home']}"></h:outputText>
-					</h:commandLink></li>
-				<li><h:commandLink action="/Enlist.xhtml">
-						<h:outputText value="#{msg['menu.enlist']}"></h:outputText>
-					</h:commandLink></li>
-				<li><h:commandLink action="/Enrollment.xhtml">
-						<h:outputText value="#{msg['menu.enroll']}"></h:outputText>
-					</h:commandLink></li>
-				<li><h:commandLink action="/test.xhtml">
-						<h:outputText value="Test"></h:outputText>
-					</h:commandLink></li>
-			</ul>
+
+		<div class="logo">
+			<h:graphicImage library="images" name="logo.png" class="w10" />
+		</div>
+		<div class="header-title">
+			<h1>#{msg['RedRose.title']}</h1>
+		</div>
+		<h:form> 
+		
+		<input id="menu-toggle" type="checkbox" /> 
+		<label	class="menu-button-container" for="menu-toggle">
+			<div class="menu-button"></div>
+		</label>
+		
+		<ul class="menu">
+			<li><h:commandLink action="/main.xhtml">
+					<h:outputText value="#{msg['menu.home']}"></h:outputText>
+				</h:commandLink></li>
+			<li><h:commandLink action="/enroll.xhtml">
+					<h:outputText value="#{msg['menu.enlist']}"></h:outputText>
+				</h:commandLink></li>
+			<li><h:commandLink action="/Enrollment.xhtml">
+					<h:outputText value="#{msg['menu.enroll']}"></h:outputText>
+				</h:commandLink></li>
+			<li><h:commandLink action="test-primeface.xhtml">
+					<h:outputText value="test-primeface"></h:outputText>
+				</h:commandLink></li>
+			<li><h:commandLink action="/test.xhtml">
+					<h:outputText value="Test"></h:outputText>
+				</h:commandLink></li>
+		</ul>
 		</h:form>
-		<h:graphicImage value="/resources/images/logo.png" />
+
+	
 	</ui:composition>
 </body>
 </html>

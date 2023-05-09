@@ -16,16 +16,33 @@
   		<version>2.2.20</version>
   	</dependency>
   	<dependency>
-  		<groupId>org.webjars</groupId>
-  		<artifactId>font-awesome</artifactId>
-  		<version>5.15.3</version>
-  	</dependency>
-  	<dependency>
   		<groupId>mysql</groupId>
   		<artifactId>mysql-connector-java</artifactId>
   		<version>8.0.32</version>
   	</dependency>
-    </dependencies>
+  	<dependency>
+  		<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-core</artifactId>
+  		<version>5.6.15.Final</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-validator</artifactId>
+  		<version>6.2.5.Final</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>javax.validation</groupId>
+  		<artifactId>validation-api</artifactId>
+  		<version>2.0.1.Final</version>
+  	</dependency>
+  	
+  	  	<!-- https://mvnrepository.com/artifact/org.primefaces/primefaces -->
+<dependency>
+    <groupId>org.primefaces</groupId>
+    <artifactId>primefaces</artifactId>
+    <version>12.0.0-RC3</version>
+</dependency>
+  </dependencies>
   <build>
     <plugins>
       <plugin>
